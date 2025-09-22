@@ -1,0 +1,35 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Nerv Scripts",
+   LoadingTitle = "Nerv Scripts",
+   LoadingSubtitle = "by Nerv",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = "NervScripts",
+      FileName = "Config"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "https://discord.gg/TeDvE6MpQC",
+      RememberJoins = true
+   },
+   KeySystem = true, -- Enable key system
+   KeySettings = {
+      Title = "Enter Key",
+      Subtitle = "Unlock Nerv Scripts",
+      Note = "Join Discord to get the key!",
+      FileName = "NervKey",
+      SaveKey = true,
+      GrabKeyFromSite = false,
+      Key = "DarkHalo" -- Set key to DarkHalo
+   }
+})
+
+local Tab = Window:CreateTab("Main", nil)
+Tab:CreateButton({
+   Name = "Example",
+   Callback = function()
+      print("Example pressed")
+   end
+})
